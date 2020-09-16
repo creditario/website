@@ -1,0 +1,14 @@
+<script>
+    let navbar = document.getElementById('navbar');
+    let navButton = document.getElementById('navButton');
+    let navMenu = document.getElementById('navMenu');
+    let burger = document.getElementById('burger');
+    let close = document.getElementById('close');
+
+    navButton.addEventListener('click', function() {
+        navbar.classList.toggle('change');
+        navMenu.classList.toggle('hidden');
+        burger.classList.toggle('hidden');
+        close.classList.toggle('hidden');
+    });
+</script>

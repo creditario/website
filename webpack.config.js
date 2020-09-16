@@ -10,22 +10,22 @@ module.exports = {
     modules: false,
     builtAt: false,
     timings: false,
-    children: false,
+    children: false
   },
   output: {
     path: path.resolve(__dirname, "output", "_bridgetown", "static", "js"),
-    filename: "all.[contenthash].js",
+    filename: "all.[contenthash].js"
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx"]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "../css/all.[contenthash].css",
+      filename: "../css/all.[contenthash].css"
     }),
     new ManifestPlugin({
-      fileName: path.resolve(__dirname, ".bridgetown-webpack", "manifest.json"),
-    }),
+      fileName: path.resolve(__dirname, ".bridgetown-webpack", "manifest.json")
+    })
   ],
   module: {
     rules: [
@@ -36,17 +36,16 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env"],
             plugins: [
-              ["@babel/plugin-proposal-decorators", { "legacy": true }],
-              ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+              "@babel/plugin-proposal-class-properties",
               [
                 "@babel/plugin-transform-runtime",
                 {
-                  helpers: false,
-                },
-              ],
-            ],
-          },
-        },
+                  helpers: false
+                }
+              ]
+            ]
+          }
+        }
       },
       {
         test: /\.(s[ac]|c)ss$/,
@@ -58,21 +57,34 @@ module.exports = {
             options: {
               sassOptions: {
                 includePaths: [
-                  path.resolve(__dirname, "src/_components")
-                ],
-              },
-            },
+                  path.resolve(__dirname, "src/_components"),
+                  path.resolve(__dirname, "src/_includes")
+                ]
+              }
+            }
           },
-        ],
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require("postcss-import"),
+                  require("tailwindcss"),
+                  require("autoprefixer")
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
         loader: "file-loader",
         options: {
           outputPath: "../fonts",
-          publicPath: "../fonts",
-        },
-      },
-    ],
-  },
+          publicPath: "../fonts"
+        }
+      }
+    ]
+  }
 };

@@ -1,17 +1,173 @@
-$body-background: #fafafa;
-$body-color: #444;
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
+
+$dark-blue: #0A2540;
+$mid-blue: #425466;
+$dark-green: #306370;
+$mid-green: #6CAC88;
+$light-green: #C2D563;
+$dark-gray: #E5E5E5;
+$light-gray: #F6F9FC;
+$red: #FF6666;
+
+$navbar: -10px 10px 15px rgba(0, 0, 0, 0.15);
+$hard: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$soft: 0px 8px 8px rgba(0, 0, 0, 0.15);
 
 body {
-  background: $body-background;
-  color: $body-color;
-  font-family: sans-serif;
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $dark-blue;
+
+  h1 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 80px;
+  }
+
+  nav a {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  h2 {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  
+  h3 {
+    font-weight: bold;
+  }
+
+  footer {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  nav {
+    a {
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 34px;
+      &:hover {
+        color: $mid-green;
+      }
+    }
+    .logo {
+      max-width: 200px;
+    }
+  }
+
+  section {
+    height: 698px;
+    h1,h2,h3,p {
+      margin-bottom: 20px;
+    }
+    img {
+      margin-top: 40px;
+      position: absolute;
+      right: 0;
+      width: 460px;
+      height: 304px;
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
-h1, nav, footer {
-  text-align: center;
+footer {
+  height: 95px;
+  background-color: $dark-blue;
+  color: $light-gray;
+  .logo {
+    max-width: 120px;
+  }
+} 
+
+@media (min-width: 640px) {
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  nav a {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
-main {
-  margin: 4rem auto;
-  max-width: 60rem;
+.btn {
+  width: 120px;
+  height: 40px;
+  background: $red;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
+  }
+  &.btn-wide {
+    width: 245px;
+  }
+}
+
+.selected {
+  background-color: $light-green;
+}
+
+#sec1 {
+  background: url(/images/background.svg);
+}
+
+#sec2 {
+  background-color: $light-gray;
+  h3 {
+    color: $dark-green;
+  }
+}
+
+#sec3 {
+  h3 {
+    color: $mid-green;
+  }
+}
+
+#sec4 {
+  background-color: $dark-green;
+  h3 {
+    color: $light-green;
+  }
+  h2, p {
+    color: $dark-gray;
+  }
+}
+
+#sec5 {
+  background-color: $light-green;
+  h3 {
+    color: $dark-green;
+  }
+  h2, p {
+    color: $dark-blue;
+  }
+}
+
+.change {
+  background-color: $light-gray;
+  box-shadow: $navbar;
 }
