@@ -1,32 +1,22 @@
-<nav id="navbar" class="w-full absolute top-0 py-4">
+<nav id="navbar" class="w-full absolute top-0 py-4 flex items-center flex-wrap px-5">
   
-  <div class="w-full flex items-center justify-around">
-    
-    <img class="logo w-3/5" src="/images/creditarioDark.svg" alt="creditar.io">
-
-    
-    <div class="w-2/5 flex items-center justify-around">
-      <button class="btn">Contacto</button>
-      <button id="navButton" class="lg:hidden flex items-center">
-        <img id="burger" class="" src="/images/burger.svg" alt="menu">
-        <img id="close" class="hidden" src="/images/close.svg" alt="menu">
-      </button>
-    </div>
-
+  <div class="flex-grow lg:order-1">
+    <img class="logo" src="/images/creditarioDark.svg" alt="creditar.io">
   </div>
   
-
- <div id="navMenu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
-    <div class="text-2xl lg:flex-grow px-5 pt-6">
-      <a href="#responsive-header" class="block pl-6">
-        Soluciones
-      </a>
-      <a href="#responsive-header" class="block pl-6 my-3 selected">
-        Compañía
-      </a>
-      <a href="#responsive-header" class="block pl-6">
-        Blog
-      </a>
-    </div>
+  <div class="flex-none flex items-center lg:order-3">
+    <button class="btn">Contacto</button>
+      
+    <button id="navButton" class="lg:hidden flex items-center ml-5">
+      <img id="burger" class="" src="/images/burger.svg" alt="menu">
+      <img id="close" class="hidden" src="/images/close.svg" alt="menu">
+    </button>
   </div>
+
+  <div id="navMenu" class="w-full block hidden mt-5 lg:mt-0 lg:order-2 lg:w-auto lg:flex-none lg:flex lg:items-center">
+    <a href="#" class="block pl-8 lg:px-5">Soluciones</a>
+    <a href="#" class="block pl-8 my-3 lg:px-5 selected">Compañía</a>
+    <a href="#" class="block pl-8 lg:px-5">Blog</a>
+  </div>
+  
 </nav>
