@@ -1,1 +1,0 @@
-# Creditar.io Static Home Page
