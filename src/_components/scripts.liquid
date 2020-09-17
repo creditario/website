@@ -21,4 +21,11 @@
             navbar.classList.add('change');
         }
     });
+
+    document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            link.classList.toggle('selected');
+        })
+    });
 </script>
