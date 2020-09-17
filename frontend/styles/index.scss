@@ -160,6 +160,14 @@ footer {
   box-shadow: $navbar;
 }
 
+@media (min-width: 768px) {
+  body {
+    section {
+      height: 790px;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   body {
     h1 {
