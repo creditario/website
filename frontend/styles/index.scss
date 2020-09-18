@@ -18,7 +18,7 @@ $soft: 0px 8px 8px rgba(0, 0, 0, 0.15);
 body {
   font-family: 'Barlow', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: $dark-blue;
@@ -34,13 +34,13 @@ body {
     font-size: 28px;
     line-height: 34px;
   }
-  
+
   h2 {
     font-weight: bold;
     font-size: 22px;
     line-height: 26px;
   }
-  
+
   h3 {
     font-weight: bold;
   }
@@ -84,7 +84,7 @@ footer {
     width: 28vw;
     max-width: 120px;
   }
-} 
+}
 
 .btn {
   width: 120px;
@@ -109,24 +109,24 @@ footer {
   background-color: $light-green;
 }
 
-#sec1 {
+#home {
   background: url(/images/background.svg);
 }
 
-#sec2 {
+#products {
   background-color: $light-gray;
   h3 {
     color: $dark-green;
   }
 }
 
-#sec3 {
+#customers {
   h3 {
     color: $mid-green;
   }
 }
 
-#sec4 {
+#credits {
   background-color: $dark-green;
   h3 {
     color: $light-green;
@@ -136,7 +136,7 @@ footer {
   }
 }
 
-#sec5 {
+#api {
   background-color: $light-green;
   h3 {
     color: $dark-green;
@@ -158,7 +158,6 @@ footer {
       font-size: 36px;
       line-height: 43px;
     }
-  
     nav a {
       font-weight: bold;
       font-size: 14px;
