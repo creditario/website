@@ -1,17 +1,22 @@
 <nav id="navbar" class="w-full fixed top-0 py-4 flex items-center flex-wrap px-5">
-  <div class="flex-grow lg:order-1">
-    <img class="logo" src="/images/creditario-dark.svg" alt="creditar.io">
+  
+  <div class="logo lg:order-1">
+    <img src="/images/creditario-dark.png" alt="creditar.io">
   </div>
-  <div class="flex-none flex items-center lg:order-3">
-    <button class="btn">Contacto</button>
-    <button id="navButton" class="lg:hidden flex items-center ml-2">
-      <img id="burger" class="w-8 h-8 mt-2" src="/images/burger.svg" alt="menu">
-      <img id="close" class="w-8 h-8 mt-2 hidden" src="/images/close.svg" alt="menu">
+  
+  <div class="flex-grow flex justify-end items-center lg:order-3 lg:flex-none lg:ml-5">
+    <button class="btn">
+      <a href="mailto:ventas@creditar.io">Contacto</a>
+    </button>
+    <button id="navButton" class="lg:hidden flex items-center ml-2 md:ml-8">
+      <img id="burger" class="icon w-8 h-8" src="/images/burger.svg" alt="menu">
+      <img id="close" class="icon w-8 h-8 hidden" src="/images/close.svg" alt="menu">
     </button>
   </div>
-  <div id="navMenu" class="w-full block hidden mt-5 lg:mt-0 lg:order-2 lg:w-auto lg:flex-none lg:flex lg:items-center">
-    <a href="#" class="block pl-8 lg:px-5">Soluciones</a>
-    <a href="#" class="block pl-8 my-3 lg:px-5 selected">Compañía</a>
-    <a href="#" class="block pl-8 lg:px-5">Blog</a>
+  
+  <div id="navMenu" class="w-full block hidden mt-5 lg:mt-0 lg:order-2 lg:w-auto lg:flex-grow lg:flex lg:items-center lg:justify-end">
+    <a href="#" class="block pl-8 lg:p-0">Soluciones</a>
+    <a href="#" class="block pl-8 my-2 lg:p-0 lg:mx-5">Compañía</a>
+    <a href="https://blog.creditar.io" target="blank" class="block pl-8 lg:p-0">Blog</a>
   </div>
 </nav>
