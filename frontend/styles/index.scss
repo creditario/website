@@ -16,19 +16,12 @@ $hard: 0px 4px 4px rgba(0, 0, 0, 0.15);
 $soft: 0px 8px 8px rgba(0, 0, 0, 0.15);
 
 body {
-  max-width: 1024px;
-  margin: auto;
   font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: $dark-blue;
-
-  nav {
-    max-width: 1024px;
-    margin: auto;
-  }
 
   h1 {
     font-weight: bold;
@@ -184,10 +177,40 @@ footer {
       line-height: 17px;
     }
   }
+
+  .not-cropped {
+    max-width: 700px;
+  }
 }
 
 .icon {
   filter: drop-shadow(-10px 10px 15px rgba(0, 0, 0, 0.15));
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-in-up__animate {
+  animation-name: fadeInUp;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
