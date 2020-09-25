@@ -17,3 +17,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Happy Bridgetowning!
 
 gem "bridgetown", "~> 0.16.0"
+
+group :development do
+  gem "capistrano", "~> 3.14", require: false
+  gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano-rvm', require: false
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
+end
