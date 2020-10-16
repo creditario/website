@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Creditar.io - La plataforma bancaria diseñada integrar tu negocio financiero.
-tagline: La plataforma bancaria diseñada integrar tu negocio financiero.
+title: Creditar.io - La plataforma bancaria diseñada para integrar tu negocio financiero.
+tagline: La plataforma bancaria diseñada para integrar tu negocio financiero.
 email: hola@creditar.io
 description: Manejo de créditos, crowdfunding y wallets electrónicos a través de una API que te ofrece la libertad de enfocarte en tu negocio sin preocuparte por la tecnología.
