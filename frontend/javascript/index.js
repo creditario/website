@@ -11,6 +11,9 @@ let navButton = document.getElementById("navButton");
 let navMenu = document.getElementById("navMenu");
 let burger = document.getElementById("burger");
 let close = document.getElementById("close");
+let contactNav = document.getElementById("cta-nav");
+let contactBtn1 = document.getElementById("cta-1");
+let contactBtn2 = document.getElementById("cta-2");
 
 navButton.addEventListener("click", function () {
   if (window.scrollY == 0) {
@@ -31,3 +34,22 @@ window.addEventListener("scroll", function () {
     navbar.classList.add("change");
   }
 });
+
+contactNav.parentElement.onclick = () => {
+  const contactController = application.controllers.filter(
+    (ele) => ele.identifier === "contact"
+  )[0];
+  contactController.openModal();
+};
+contactBtn1.parentElement.onclick = () => {
+  const contactController = application.controllers.filter(
+    (ele) => ele.identifier === "contact"
+  )[0];
+  contactController.openModal();
+};
+contactBtn2.parentElement.onclick = () => {
+  const contactController = application.controllers.filter(
+    (ele) => ele.identifier === "contact"
+  )[0];
+  contactController.openModal();
+};

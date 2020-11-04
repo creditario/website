@@ -98,7 +98,8 @@ footer {
   width: 120px;
   height: 40px;
   background: $red;
-  a {
+  a,
+  span {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
@@ -118,6 +119,12 @@ footer {
   &.btn-wide {
     width: 245px;
   }
+  &.btn-cancel {
+    background-color: #e5e5e5;
+    span {
+      color: $mid-blue;
+    }
+  }
 }
 
 #home {
@@ -125,7 +132,12 @@ footer {
 }
 
 #products {
-  background: linear-gradient(108.24deg, $light-gray 22.24%, rgba(181, 181, 181, 0) 81.67%), $light-gray;
+  background: linear-gradient(
+      108.24deg,
+      $light-gray 22.24%,
+      rgba(181, 181, 181, 0) 81.67%
+    ),
+    $light-gray;
   background-color: $light-gray;
   h3 {
     color: $dark-green;
@@ -139,7 +151,12 @@ footer {
 }
 
 #credits {
-  background: linear-gradient(107.48deg, $dark-green 17.43%, rgba(83, 176, 200, 0) 82.79%), $dark-green;
+  background: linear-gradient(
+      107.48deg,
+      $dark-green 17.43%,
+      rgba(83, 176, 200, 0) 82.79%
+    ),
+    $dark-green;
   background-color: $dark-green;
   h3 {
     color: $light-green;
@@ -151,7 +168,12 @@ footer {
 }
 
 #api {
-  background: linear-gradient(107.44deg, $light-green 15.77%, rgba(218, 235, 133, 0) 70.24%), $light-green;
+  background: linear-gradient(
+      107.44deg,
+      $light-green 15.77%,
+      rgba(218, 235, 133, 0) 70.24%
+    ),
+    $light-green;
   background-color: $light-green;
   h3 {
     color: $dark-green;
@@ -216,4 +238,23 @@ footer {
   opacity: 0;
   animation-duration: 1s;
   animation-fill-mode: both;
+}
+
+.form-box {
+  background-color: $mid-green;
+  width: 35%;
+}
+
+.logo-contact-form {
+  width: 100%;
+
+  img {
+    box-shadow: none;
+    height: 25%;
+    width: 75%;
+  }
+}
+
+.form-input {
+  width: 65%;
 }
