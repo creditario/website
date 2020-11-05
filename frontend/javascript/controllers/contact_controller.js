@@ -10,20 +10,22 @@ export default class extends Controller {
 
   showError(input, msg, title) {
     if (title) {
-      msg.forEach((element, index) => {
-        let errorParagraph = document.createElement("p");
-        errorParagraph.classList.add(
-          "text-red-500",
-          "text-xs",
-          "italic",
-          "m-0"
-        );
-        errorParagraph.textContent = element;
-        input.parentElement.insertBefore(
-          errorParagraph,
-          input.parentElement.children[index + 1]
-        );
-      });
+      if (!input.nextElementSibling.classList.contains("text-red-500")) {
+        msg.forEach((element, index) => {
+          let errorParagraph = document.createElement("p");
+          errorParagraph.classList.add(
+            "text-red-500",
+            "text-xs",
+            "italic",
+            "m-0"
+          );
+          errorParagraph.textContent = element;
+          input.parentElement.insertBefore(
+            errorParagraph,
+            input.parentElement.children[index + 1]
+          );
+        });
+      }
     } else {
       const errorParagraph = document.createElement("p");
       errorParagraph.id = "errorParagraph";
@@ -107,6 +109,8 @@ export default class extends Controller {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          "Access-Control-Request-Headers": "Accept, Content-Type",
+          "Access-Control-Request-Method": "POST",
         },
         body: JSON.stringify(data),
       }
