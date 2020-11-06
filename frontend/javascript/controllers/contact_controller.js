@@ -14,7 +14,7 @@ export default class extends Controller {
 
   openModal(e) {
     e.preventDefault();
-    this.element.style.overflowY = "hidden";
+    this.element.style.overflow = "hidden";
     this.modalTarget.classList.remove("hidden");
   }
 
@@ -185,6 +185,6 @@ export default class extends Controller {
     }
 
     this.formTarget.reset();
-    this.element.style.overflowY = "auto";
+    this.element.style.overflow = "auto";
   }
 }
