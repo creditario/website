@@ -16,8 +16,8 @@ export default class extends Controller {
           errorParagraph.classList.add(
             "text-red-500",
             "text-xs",
-            "italic",
-            "m-0"
+            "m-0",
+            "font-normal"
           );
           errorParagraph.textContent = element;
           input.parentElement.insertBefore(
@@ -29,7 +29,7 @@ export default class extends Controller {
     } else {
       const errorParagraph = document.createElement("p");
       errorParagraph.id = "errorParagraph";
-      errorParagraph.classList.add("text-red-500", "text-xs", "italic");
+      errorParagraph.classList.add("text-red-500", "text-xs", "font-normal");
       errorParagraph.textContent = msg;
       input.classList.add("border-red-500");
 
@@ -102,18 +102,24 @@ export default class extends Controller {
   }
 
   contactRequest(data, thisClass) {
+    const headers = new Headers();
+    headers.append("Access-Control-Request-Headers", "Accept, Content-Type");
+    headers.append("Access-Control-Request-Method", "POST");
+    headers.append("Accept", "application/json");
+    headers.append("Content-Type", "application/json");
+
+    const dataStr = JSON.stringify(data);
+
+    var requestOptions = {
+      method: "POST",
+      headers: headers,
+      body: dataStr,
+      redirect: "follow",
+    };
+
     fetch(
       "https://7iplakas91.execute-api.us-east-2.amazonaws.com/production/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Request-Headers": "Accept, Content-Type",
-          "Access-Control-Request-Method": "POST",
-        },
-        body: JSON.stringify(data),
-      }
+      requestOptions
     )
       .then(async (response) => {
         return (data = {
