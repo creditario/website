@@ -1,11 +1,21 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["title", "name", "company", "email", "message", "cancel"];
+  static targets = [
+    "modal",
+    "form",
+    "title",
+    "name",
+    "company",
+    "email",
+    "message",
+    "cancel",
+  ];
 
-  openModal() {
-    document.getElementsByTagName("body")[0].style.overflowY = "hidden";
-    this.element.classList.remove("hidden");
+  openModal(e) {
+    e.preventDefault();
+    this.element.style.overflowY = "hidden";
+    this.modalTarget.classList.remove("hidden");
   }
 
   showError(input, msg, title) {
@@ -151,12 +161,13 @@ export default class extends Controller {
   }
 
   closeModal(e) {
+    e.preventDefault();
+
     const titleErrors = [
       ...this.titleTarget.parentElement.children,
     ].filter((ele) => ele.classList.contains("text-red-500"));
 
-    e.preventDefault();
-    this.element.classList.add("hidden");
+    this.modalTarget.classList.add("hidden");
     if (this.nameTarget.classList.contains("border-red-500")) {
       this.nameTarget.classList.remove("border-red-500");
       document.getElementById("errorParagraph").remove();
@@ -173,7 +184,7 @@ export default class extends Controller {
       titleErrors.forEach((ele) => ele.remove());
     }
 
-    document.getElementsByTagName("form")[0].reset();
-    document.getElementsByTagName("body")[0].style.overflowY = "auto";
+    this.formTarget.reset();
+    this.element.style.overflowY = "auto";
   }
 }
