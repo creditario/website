@@ -12,6 +12,12 @@ export default class extends Controller {
     "cancel",
   ];
 
+  initialize() {
+    this.nameTarget.maxLength = 60;
+    this.companyTarget.maxLength = 60;
+    this.emailTarget.maxLength = 50;
+  }
+
   openModal(e) {
     e.preventDefault();
     this.element.style.overflow = "hidden";
