@@ -242,7 +242,6 @@ footer {
 
 .form-box {
   background-color: $mid-green;
-  width: 35%;
 }
 
 .logo-contact-form {
@@ -251,10 +250,9 @@ footer {
   img {
     box-shadow: none;
     height: 25%;
-    width: 75%;
   }
 }
 
-.form-input {
-  width: 65%;
+.info-sub {
+  color: $dark-gray;
 }

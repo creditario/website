@@ -4,7 +4,15 @@ module.exports = {
     content: ["./output/**/*.html"],
   },
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        35: "35%",
+        65: "65%",
+      },
+      spacing: {
+        md: "25px",
+      },
+    },
     zIndex: {
       100: 100,
     },
