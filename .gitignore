@@ -33,3 +33,9 @@ yarn-debug.log*
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# NVM Version
+.nvmrc
+
+# Prettier Config
+prettier.config.js

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+
+<section id="vacantes">
+	<div class="flex justify-center h-full items-center flex-col pt-20">
+		<p class="w-11/12 text-gray-100 text-xl md:text-2xl leading-snug font-normal mt-10">
+			Creditario, la plataforma de gestión de créditos y motor bancario, te invita a formar parte de su equipo. En este sitio encontrarás las oportunidades para las que estamos recibiendo información de las personas que desean postularse para alguna de nuestras vacantes.
+		</p>
+		<div class="w-10/12 bg-white rounded-lg p-5 mb-3">
+			<p class="font-medium text-3xl mb-5">
+				Vacantes
+			</p>
+			<div>
+				{% for vacante in site.vacantes %}
+					<div class="flex justify-between items-center flex-wrap">
+						<div class="w-full md:w-10/12 p-5">
+							<p class="text-xl font-medium">
+								{{ vacante.position }} 
+							</p>
+							<p class="px-3">
+								{{vacante.intro}}
+							</p>
+						</div>
+						<div class="w-full md:w-2/12 p-5 flex justify-center items-center">
+							<a href="{{ vacante.url }}">
+								Ver más
+							</a>
+						</div>
+						<div class="w-full flex justify-center">
+							<div class="w-10/12 h-px divider"></div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% render "contact_modal", metadata: site.metadata %}

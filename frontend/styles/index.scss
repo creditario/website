@@ -1,6 +1,6 @@
-@import "tailwindcss/base.css";
-@import "tailwindcss/components.css";
-@import "tailwindcss/utilities.css";
+@import 'tailwindcss/base.css';
+@import 'tailwindcss/components.css';
+@import 'tailwindcss/utilities.css';
 
 $dark-blue: #0a2540;
 $mid-blue: #425466;
@@ -16,7 +16,7 @@ $hard: 0px 4px 4px rgba(0, 0, 0, 0.15);
 $soft: 0px 8px 8px rgba(0, 0, 0, 0.15);
 
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -181,6 +181,20 @@ footer {
   h2,
   p {
     color: $dark-blue;
+  }
+}
+
+#vacantes {
+  background-color: $dark-green;
+  min-height: 90vh;
+  min-width: 100% !important;
+
+  h5 {
+    color: $dark-blue;
+  }
+
+  .divider {
+    background-color: $light-green;
   }
 }
 
