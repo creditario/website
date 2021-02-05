@@ -1,83 +1,48 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    {% render "head", metadata: site.metadata, title: page.title %}
-  </head>
-  <body class="{{ page.layout }} {{ page.page_class }}" data-controller="contact">
-    {% render "navbar", metadata: site.metadata, page: page %}
-    <main>
-      <section id="vacantes">
-				<div class="flex justify-center h-full items-center flex-col pt-20">
-					<p class="w-11/12 text-gray-100 text-xl md:text-2xl leading-snug font-normal mt-10">
-						Creditario, la plataforma de gestión de créditos y motor bancario, te invita a formar parte de su equipo. En este sitio encontrarás las oportunidades para las que estamos recibiendo información de las personas que desean postularse para alguna de nuestras vacantes.
-					</p>
-					<div class="w-10/12 bg-white rounded-lg p-5 mb-3">
-						<p class="font-medium text-3xl mb-5">
-							{{page.position}}
-						</p>
-						<div>
-							<div class="flex justify-center items-center flex-col">
-								<div class="w-full p-5">
-									<p class="m-0">
-										{{page.intro_2}}
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="font-medium text-2xl m-0">
-										Acerca de la vacante
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="px-3">
-										{{page.description}}
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="font-medium text-2xl m-0">
-										¿Qué buscamos?
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="px-3">
-										Buscamos a una persona que cumpla con los siguientes requisitos:
-									</p>
-									<ul class="px-3">
-										{% for skill in page.skills %}
-											<li>- {{skill}}</li>
-										{% endfor %}
-									</ul>
-								</div>
-								<div class="w-full p-5">
-									<p class="font-medium text-2xl m-0">
-										¿Qué ofrecemos?
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="px-3">
-										{{page.offer}}
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="font-medium text-2xl m-0">
-										¿Cómo aplicar?
-									</p>
-								</div>
-								<div class="w-full p-5">
-									<p class="px-3">
-										Envía tu curriculum acompañado de una breve presentación a la dirección de correo electrónico.
-									</p>
-									<p class="px-3 text-xl underline">
-										empleo@creditar.io
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+---
+layout: default
+---
+<section class="pt-32 bg-gray-100 border-t-4 border-teal-700">
+  <div class="max-w-6xl px-6 py-8 mx-auto">
+    <header class="space-y-4">
+      <div class="max-w-xl text-gray-800 text-md leading-5">
+        <h1 class="">Ayúdanos a construir la mejor plataforma de gestión de créditos y motor bancario.</h1>
+        <p>
+          En Creditario, desarrollamos una plataforma para que empresas Fintech puedan acelerar el desarrollo de modernos y novedosos productos para sus clientes.
+        </p>
+        <p>
+          Para lograr los objetivos de la plataforma buscamos a personas talentosas para que se unan a nuestro equipo y nos ayuden con la visión que nos trazamos.
+        </p>
+      </div>
+    </header>
+  </div>
+</section>
 
-			{% render "contact_modal", metadata: site.metadata %}
-    </main>
-    {% render "footer", metadata: site.metadata %}
-  </body>
-</html>
+<section class="bg-white">
+  <main class="max-w-2xl px-6 mx-auto lg:max-w-6xl">
+    <article class="py-12 border-t-2 border-gray-20 grid lg:grid-cols-3 lg:gap-16">
+      {% render "vacante_sidebar", post: page %}
+
+      <div class="col-span-2 space-y-12">
+        <div class="space-y-8">
+          <div class="space-y-2">
+            <h1 class="text-3xl font-bold text-gray-900 leading-9 sm:text-4xl sm:leading-10">{{ page.title }}</h1>
+            <p class="text-lg text-gray-600 leading-7">{{ page.description }}</p>
+          </div>
+        </div>
+
+        {% render "vacante_sidebar_mobile", post: page %}
+
+        <div class="prose">
+          {{ content }}
+
+          {% if page.closed == "Abierta" %}
+            <h2>¿Cómo aplicar?</h2>
+            <p>Envía tu curriculum acompañado de una breve presentación a la dirección de correo electrónico <a class="font-semibold hover:underline" href="mailto:empleo@creditar.io?subject={{ post.title }}">empleo@creditar.io</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  </main>
+</section>
+
+{% render "contact_modal", metadata: site.metadata %}
