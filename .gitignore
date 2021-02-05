@@ -39,3 +39,4 @@ yarn-debug.log*
 
 # Prettier Config
 prettier.config.js
+log/

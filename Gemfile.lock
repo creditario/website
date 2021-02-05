@@ -42,7 +42,7 @@ GEM
       tilt (~> 2.0)
     bridgetown-paginate (0.16.0)
       bridgetown-core (= 0.16.0)
-    capistrano (3.15.0)
+    capistrano (3.14.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -116,7 +116,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt_pbkdf
   bridgetown (~> 0.16.0)
-  capistrano (~> 3.14)
+  capistrano (~> 3.14.1)
   capistrano-rails (~> 1.6)
   capistrano-rvm
   ed25519
