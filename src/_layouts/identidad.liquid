@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    {% render "head", metadata: site.metadata, title: page.title %}
+  </head>
+  <body class="{{ page.layout }} {{ page.page_class }}" data-controller="contact">
+    {% render "identidad_navbar", metadata: site.metadata, page: page %}
+    <main id="identidad">
+      <section class="min-h-screen flex flex-wrap items-stretch justify-around bg-white pt-32 lg:pt-0">
+        <div class="w-full lg:w-1/2 px-10">
+          <div class="flex flex-col items-start justify-center h-full">
+            <img src="/images/identidad_main.png" alt="Identidad título y logo" class="w-28 h-10 shadow-none"/>
+            <div class="my-5">
+              <p class="font-bold text-2xl md:text-4xl lg:text-6xl my-3 lg:my-10">
+                Verifica la identidad
+              </p>
+              <p class="font-bold text-2xl md:text-4xl lg:text-6xl my-3 lg:my-10 text-creditario">
+                de tus clientes
+              </p>
+              <p class="text-lg lg:text-2xl leading-normal my-5">
+                Verifica de forma programática la identidad de tus clientes mediante la verificaión de INEs/IFEs y pasaportes, consulta en listas de sanciones y validación de CURPs.
+              </p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center w-full">
+              <button class="main__btn-signup w-full lg:w-auto font-semibold bg-creditario text-white rounded-lg px-10 py-5 lg:mr-5 my-5 lg:my-0">Crear una cuenta gratuita</button>
+              <button class=" w-full lg:w-auto font-semibold shadow rounded-lg text-creditario px-10 py-5  my-5 lg:my-0">Consulta el API</button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <img src="/images/identidad_main_bg.png" alt="Identidad título y logo" class="main__bg object-cover h-96 lg:h-full w-full shadow-none"/>
+        </div>
+      </section>
+      <section class="bg-almost-gray px-10 py-20">
+        <div class="flex flex-col items-center justify-center">
+          <p class="font-bold text-sm md:text-lg">VERIFICACIONES</p>
+          <p class="font-bold text-lg md:text-2xl lg:text-4xl text-black">Identifica clientes legítimos</p>
+          <p class="identidad__text-almost-white text-center">Reduce los ataques fraudulentos y confía en los clientes legítimos</p>
+        </div>
+        <div class="px-10 grid md:grid-cols-1 lg:grid-cols-2 gap-10 my-10">
+          <div class="flex items-start">
+            <div class="w-20">
+              <div class="bg-creditario p-2 h-10 w-10 rounded-lg flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="w-11/12">
+              <p class="font-semibold">Consulta la listas de sanciones</p>
+              <p class="identidad__text-almost-white">
+                Consulta en un solo lugar las listas de sanciones del SAT, Departamento de Tesoro de Estados Unidos, de personas públicamente expuestas y de entidades policiacas de México y de Estados Unidos.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-20">
+              <div class="bg-creditario p-2 h-10 w-10 rounded-lg flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                </svg>
+              </div>
+            </div>
+            <div class="w-11/12">
+              <p class="font-semibold">Verificación de documentos</p>
+              <p class="identidad__text-almost-white">
+                Verifica que los documnetos proporcionados por el cliente sean documentos que pertencen a INE/IFE tanto frontal como reverso además de verificar pasaportes.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-20">
+              <div class="bg-creditario p-2 h-10 w-10 rounded-lg flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="w-11/12">
+              <p class="font-semibold">Validación de CURP</p>
+              <p class="identidad__text-almost-white">
+                Valida que el CURP cumpla con los requisitos de formato pero además confirma que es un CURP existente y obtiene la información del mismo.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-20">
+              <div class="bg-creditario p-2 h-10 w-10 rounded-lg flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="w-11/12">
+              <p class="font-semibold">Más puntos de verificación</p>
+              <p class="identidad__text-almost-white">
+                Nuestro equipo sigue trabajando en traer más puntos de verificación que ayuden a generar confianza en clientes legítimos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% render "footer", metadata: site.metadata %}
+  </body>
+</html>

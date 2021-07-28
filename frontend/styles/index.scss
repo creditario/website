@@ -270,3 +270,19 @@ footer {
 .info-sub {
   color: $dark-gray;
 }
+
+#identidad {
+  .identidad__text-almost-white {
+    color: #6b7280;
+  }
+
+  .main {
+    &__bg {
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &__btn-signup {
+      color: white;
+    }
+  }
+}

@@ -1,16 +1,20 @@
 module.exports = {
   purge: {
-    mode: "production",
-    content: ["./output/**/*.html"],
+    mode: 'production',
+    content: ['./output/**/*.html'],
   },
   theme: {
+    colors: {
+      creditario: '#6CAC88',
+      'almost-gray': '#F9FAFB',
+    },
     extend: {
       width: {
-        35: "35%",
-        65: "65%",
+        35: '35%',
+        65: '65%',
       },
       spacing: {
-        md: "25px",
+        md: '25px',
       },
     },
     zIndex: {
@@ -18,5 +22,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require('@tailwindcss/typography')],
 };
