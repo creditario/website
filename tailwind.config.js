@@ -15,6 +15,9 @@ module.exports = {
         35: '35%',
         65: '65%',
       },
+      height: {
+        96: '24rem',
+      },
       spacing: {
         md: '25px',
       },
