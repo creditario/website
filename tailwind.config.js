@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     colors: {
       creditario: '#6CAC88',
+      'dark-gray': '#6B7280',
       'almost-gray': '#F9FAFB',
+      'dark-green': '#306370',
     },
     extend: {
       width: {

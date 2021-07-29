@@ -285,4 +285,21 @@ footer {
       color: white;
     }
   }
+
+  .identidad {
+    &__integracion {
+      &-cards {
+        &-logo {
+          top: -10%;
+        }
+        &-button {
+          bottom: -12%;
+
+          button {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
 }
