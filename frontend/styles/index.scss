@@ -1,6 +1,5 @@
 @import 'tailwindcss/base.css';
 @import 'tailwindcss/components.css';
-@import 'tailwindcss/utilities.css';
 
 $dark-blue: #0a2540;
 $mid-blue: #425466;
@@ -128,7 +127,7 @@ footer {
 }
 
 #home {
-  background: url(/images/background.png);
+  background: url("/images/background.png");
 }
 
 #products {
@@ -303,3 +302,5 @@ footer {
     }
   }
 }
+
+@import 'tailwindcss/utilities.css';
