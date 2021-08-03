@@ -1,6 +1,5 @@
 @import 'tailwindcss/base.css';
 @import 'tailwindcss/components.css';
-@import 'tailwindcss/utilities.css';
 
 $dark-blue: #0a2540;
 $mid-blue: #425466;
@@ -128,7 +127,7 @@ footer {
 }
 
 #home {
-  background: url(/images/background.png);
+  background: url("/images/background.png");
 }
 
 #products {
@@ -270,3 +269,38 @@ footer {
 .info-sub {
   color: $dark-gray;
 }
+
+#identidad {
+  .identidad__text-almost-white {
+    color: #6b7280;
+  }
+
+  .main {
+    &__bg {
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &__btn-signup {
+      color: white;
+    }
+  }
+
+  .identidad {
+    &__integracion {
+      &-cards {
+        &-logo {
+          top: -10%;
+        }
+        &-button {
+          bottom: -12%;
+
+          button {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import 'tailwindcss/utilities.css';

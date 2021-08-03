@@ -3,7 +3,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
-  entry: "./frontend/javascript/index.js",
+  entry: {
+    main: "./frontend/javascript/index.js"
+  },
   devtool: "source-map",
   // Set some or all of these to true if you want more verbose logging:
   stats: {
@@ -17,7 +19,15 @@ module.exports = {
     filename: "all.[contenthash].js"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
+    modules: [
+      path.resolve(__dirname, 'frontend', 'javascript'),
+      path.resolve(__dirname, 'frontend', 'styles'),
+      path.resolve('./node_modules')
+    ],
+    alias: {
+      bridgetownComponents: path.resolve(__dirname, "src", "_components")
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -36,7 +46,8 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env"],
             plugins: [
-              "@babel/plugin-proposal-class-properties",
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              ["@babel/plugin-proposal-class-properties", { "loose" : true }],
               [
                 "@babel/plugin-transform-runtime",
                 {
@@ -51,16 +62,10 @@ module.exports = {
         test: /\.(s[ac]|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
           {
-            loader: "sass-loader",
+            loader: "css-loader",
             options: {
-              sassOptions: {
-                includePaths: [
-                  path.resolve(__dirname, "src/_components"),
-                  path.resolve(__dirname, "src/_includes")
-                ]
-              }
+              url: url => !url.startsWith('/')
             }
           },
           {
@@ -74,6 +79,17 @@ module.exports = {
                 ]
               }
             }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, "src/_components"),
+                  path.resolve(__dirname, "src/_includes")
+                ]
+              }
+            }
           }
         ]
       },
@@ -84,7 +100,20 @@ module.exports = {
           outputPath: "../fonts",
           publicPath: "../fonts"
         }
-      }
+      },
+      {
+        test: /\.png?$|\.gif$|\.jpg$|\.svg$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name]-[contenthash].[ext]",
+          outputPath: "../",
+          publicPath: "../",
+        },
+      },
+      {
+        test: /pdf\.worker(\.min)?\.js$/,
+        loader: "file-loader"
+      },
     ]
   }
 };

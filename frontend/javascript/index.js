@@ -12,22 +12,26 @@ let navMenu = document.getElementById("navMenu");
 let burger = document.getElementById("burger");
 let close = document.getElementById("close");
 
-navButton.addEventListener("click", function () {
-  if (window.scrollY == 0) {
-    navbar.classList.toggle("change");
-  }
-  navMenu.classList.toggle("hidden");
-  burger.classList.toggle("hidden");
-  close.classList.toggle("hidden");
-});
+if (navButton) {
+  navButton.addEventListener("click", function () {
+    if (window.scrollY == 0) {
+      navbar.classList.toggle("change");
+    }
+    navMenu.classList.toggle("hidden");
+    burger.classList.toggle("hidden");
+    close.classList.toggle("hidden");
+  });
+}
 
-window.addEventListener("scroll", function () {
-  if (
-    window.scrollY == 0 &&
-    document.getElementById("navbar").classList.contains("change")
-  ) {
-    navbar.classList.remove("change");
-  } else {
-    navbar.classList.add("change");
-  }
-});
+if (navbar) {
+  window.addEventListener("scroll", function () {
+    if (
+      window.scrollY == 0 &&
+      document.getElementById("navbar").classList.contains("change")
+    ) {
+      navbar.classList.remove("change");
+    } else {
+      navbar.classList.add("change");
+    }
+  });
+}
