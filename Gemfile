@@ -1,27 +1,29 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Hello! This is where you manage which Bridgetown version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Bridgetown with `bundle exec`, like so:
+####
+# Welcome to your project's Gemfile, used by Rubygems & Bundler.
 #
-#   bundle exec bridgetown serve
+# To install a plugin, run:
+#
+#   bundle add new-plugin-name -g bridgetown_plugins
+#
+# This will ensure the plugin is added to the correct Bundler group.
+#
+# When you run Bridgetown commands, we recommend using a binstub like so:
+#
+#   bin/bridgetown start (or console, etc.)
 #
 # This will help ensure the proper Bridgetown version is running.
-#
-# To install a plugin, simply run bundle add and specify the group
-# "bridgetown_plugins". For example:
-#
-#   bundle add some-new-plugin -g bridgetown_plugins
-#
-# Happy Bridgetowning!
+####
 
-gem "bridgetown", "~> 0.16.0"
+# If you need to upgrade/switch Bridgetown versions, change the line below
+# and then run `bundle update bridgetown`
+gem "bridgetown", "~> 1.0.0.beta3"
 
-group :development do
-  gem "capistrano", "~> 3.14.1", require: false
-  gem "capistrano-rails", "~> 1.6", require: false
-  gem 'capistrano-rvm', require: false
-  gem 'ed25519'
-  gem 'bcrypt_pbkdf'
-end
+# Uncomment to add file-based dynamic routing to your project:
+# gem "bridgetown-routes", "~> 1.0.0.beta3", group: :bridgetown_plugins
+
+# Puma is a Rack-compatible server used by Bridgetown
+# (you can optionally limit this to the "development" group)
+gem "puma", "~> 5.5"

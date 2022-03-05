@@ -1,42 +1,67 @@
-const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+function withOpacityValue(variableName) {
+  return ({opacityValue}) => {
+    opacityValue = opacityValue ?? 1;
+    return `rgba(var(${variableName}), ${opacityValue})`
+  }
+};
 
 module.exports = {
-  purge: {
-    enabled: 'production',
-    content: ['./src/**/*.html', './src/**/*.md', './src/**/*.liquid'],
-  },
+  content: ["./src/**/*.{liquid,md,html,yml}", "./frontend/javascript/**/*.js"],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-
-      creditario: '#6CAC88',
-      'creditario-dark': '#619b7a',
-
-      'dark-gray': '#6B7280',
-      'almost-gray': '#F9FAFB',
-      'dark-green': '#306370',
-    },
     extend: {
-      width: {
-        35: '35%',
-        65: '65%',
+      fontFamily: {
+        sans: ['ObjektivMk', ...defaultTheme.fontFamily.sans],
       },
-      height: {
-        96: '24rem',
+      textColor: {
+        skin: {
+          inverted: withOpacityValue('--color-inverted'),
+          accented: withOpacityValue('--color-accented'),
+          'accented-hover': withOpacityValue('--color-accented-hover'),
+          base: withOpacityValue('--color-base'),
+          muted: withOpacityValue('--color-muted'),
+          dimmed: withOpacityValue('--color-dimmed'),
+          error: withOpacityValue('--color-error'),
+          alternate: withOpacityValue('--color-alternate'),
+          'alternate-1': withOpacityValue('--color-alternate-1'),
+          'alternate-2': withOpacityValue('--color-alternate-2')
+        }
       },
-      spacing: {
-        md: '25px',
+      backgroundColor: {
+        skin: {
+          'button-accented': withOpacityValue('--color-accented'),
+          'button-accented-hover': withOpacityValue('--color-accented-hover'),
+          'button-inverted': withOpacityValue('--color-inverted'),
+          'button-inverted-hover': withOpacityValue('--color-inverted-hover'),
+          muted: withOpacityValue('--color-muted'),
+          dimmed: withOpacityValue('--color-dimmed'),
+          accented: withOpacityValue('--color-accented'),
+          alternate: withOpacityValue('--color-alternate'),
+          'alternate-1': withOpacityValue('--color-alternate-1'),
+          'alternate-2': withOpacityValue('--color-alternate-2')
+        }
       },
-      zIndex: {
-        100: "100"
+      ringColor: {
+        skin: {
+          accented: withOpacityValue('--color-border-accented'),
+        }
+      },
+      borderColor: {
+        skin: {
+          base: withOpacityValue('--color-border-base'),
+          accented: withOpacityValue('--color-border-accented'),
+        }
+      },
+      textDecorationColor: {
+        skin: {
+          accented: withOpacityValue('--color-border-accented'),
+        }
       }
     },
   },
-  variants: {},
-  plugins: [],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+}
