@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Posts
+sitemap: false
 ---
 
 <ul>

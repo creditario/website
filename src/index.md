@@ -1,6 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-
 layout: default
 ---
 
@@ -10,7 +8,7 @@ layout: default
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
           <h1>
-            <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+            <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
               <span class="block">La plataforma bancaria para tu</span>
               <span class="block text-skin-alternate mt-3">negocio financiero</span>
             </span>
