@@ -47,6 +47,10 @@
     @apply font-bold text-skin-accented hover:text-skin-accented-hover hover:decoration-skin-accented hover:underline hover:decoration-2 hover:underline-offset-4;
   }
 
+  .mobile-navbar .navbar-item {
+    @apply block px-3 py-2 rounded-md text-base font-bold text-skin-accented hover:text-skin-accented-hover hover:bg-gray-50;
+  }
+
   .hero-main {
     background: url("/images/background.jpg");
     background-repeat: no-repeat;
