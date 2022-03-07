@@ -43,6 +43,10 @@
     @apply border-transparent bg-skin-button-accented hover:bg-skin-button-accented-hover text-skin-inverted;
   }
 
+  .button-accented[disabled] {
+    @apply bg-skin-button-accented-hover;
+  }
+
   .navbar .navbar-item {
     @apply font-bold text-skin-accented hover:text-skin-accented-hover hover:decoration-skin-accented hover:underline hover:decoration-2 hover:underline-offset-4;
   }

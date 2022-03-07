@@ -1,0 +1,109 @@
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" data-modal-target="container">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+         aria-hidden="true"
+         data-modal-target="overlay"
+         data-transition-enter="ease-out duration-300"
+         data-transition-enter-active="opacity-0"
+         data-transition-enter-to="opacity-100"
+         data-transition-leave="ease-in duration-200"
+         data-transition-leave-active="opacity-100"
+         data-transition-leave-to="opacity-0"></div>
+
+    <!-- This element is to trick the browser into centering the modal contents. -->
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+    <div class="hidden relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+         data-modal-target="modal"
+         data-transition-enter="ease-out duration-300"
+         data-transition-enter-active="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+         data-transition-enter-to="opacity-100 translate-y-0 sm:scale-100"
+         data-transition-leave="ease-in duration-200"
+         data-transition-leave-active="opacity-100 translate-y-0 sm:scale-100"
+         data-transition-leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+      <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+        <button type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" data-action="modal#close">
+          <span class="sr-only">Close</span>
+          <!-- Heroicon name: outline/x -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden" data-modal-target="confirmation">
+        <div class="sm:flex sm:items-start">
+          <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-skin-accented sm:mx-0 sm:h-10 sm:w-10">
+            <!-- Heroicon name: outline/exclamation -->
+            <svg class="h-6 w-6 text-skin-alternate" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg leading-6 font-bold text-skin-base" id="modal-title">Contactar Aoorora</h3>
+            <div class="mt-2">
+              <p class="text-sm text-skin-base">En Aoorora recibimos su información de contacto. Una persona de nuestro equipo se comunicará con usted a la brevedad posible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-modal-target="contact">
+        <div class="sm:flex sm:items-start">
+          <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-skin-accented sm:mx-0 sm:h-10 sm:w-10">
+            <!-- Heroicon name: outline/exclamation -->
+            <svg class="h-6 w-6 text-skin-alternate" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg leading-6 font-bold text-skin-base" id="modal-title">Contactar Aoorora</h3>
+            <div class="mt-2">
+              <p class="text-sm text-skin-base">Gracias por su interés en Aoorora, complete el formulario y una persona de nuestro equipo se comunicará con usted.</p>
+            </div>
+
+            <div class="hidden p-2 rounded-lg bg-skin-accented shadow-lg sm:p-3 mt-3" data-modal-target="validationAlert">
+              <div class="flex-1 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-skin-inverted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <p class="text-skin-inverted ml-2">El nombre y el correo electrónico son requeridos</p>
+              </div>
+            </div>
+
+            <div class="hidden p-2 rounded-lg bg-skin-error shadow-lg sm:p-3 mt-3" data-modal-target="errorAlert">
+              <div class="flex-1 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-skin-inverted shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <p class="text-skin-inverted ml-2">Ocurrió un problema al contactar al equipo de Aoorora. Vuelva a intentar o envíe un correo electrónico a hola@aoorora.com</p>
+              </div>
+            </div>
+
+            <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 mt-6" data-modal-target="form">
+              <div>
+                <label for="full-name" class="sr-only">Nombre Completo</label>
+                <input type="text" required="required" maxlength="60" name="full-name" id="full-name" autocomplete="name" class="block w-full input py-3 px-4" placeholder="Nombre completo (requerido)">
+              </div>
+              <div>
+                <label for="email" class="sr-only">Correo electrónico</label>
+                <input id="email" required="required" maxlength= 60" name="email" type="email" autocomplete="email" class="block w-full input py-3 px-4" placeholder="Correo electrónico (requerido)">
+              </div>
+              <div>
+                <label for="company" class="sr-only">Empresa</label>
+                <input type="text" maxlength="60" name="company" id="phone" class="block w-full input py-3 px-4" placeholder="Empresa">
+              </div>
+              <div>
+                <label for="message" class="sr-only">Mensaje</label>
+                <textarea id="message" name="message" rows="4" class="block w-full input py-3 px-4" placeholder="Mensaje"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+          <button type="button" class="w-full inline-flex button button-accented sm:ml-3 sm:w-auto sm:text-sm pt-3" data-action="modal#contact" data-modal-target="submit">Contactar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -36,6 +36,7 @@ module.exports = {
           'button-inverted-hover': withOpacityValue('--color-inverted-hover'),
           muted: withOpacityValue('--color-muted'),
           dimmed: withOpacityValue('--color-dimmed'),
+          error: withOpacityValue('--color-error'),
           accented: withOpacityValue('--color-accented'),
           alternate: withOpacityValue('--color-alternate'),
           'alternate-1': withOpacityValue('--color-alternate-1'),

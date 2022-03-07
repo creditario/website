@@ -3,15 +3,17 @@
   <head>
     {% render "head", metadata: site.metadata, title: page.title %}
   </head>
-  <body class="font-sans text-skin-base {{ resource.data.layout }} {{ resource.data.page_class }}">
+  <body class="font-sans text-skin-base {{ resource.data.layout }} {{ resource.data.page_class }}" data-controller="modal">
 
-  {% render "navbar", metadata: site.metadata, resource: resource %}
+    {% render "navbar", metadata: site.metadata, resource: resource %}
 
-  <div class="relative bg-white overflow-hidden">
+    <div class="relative bg-white overflow-hidden">
 
-    {{ content }}
+      {{ content }}
 
-    {% render "footer", metadata: site.metadata %}
-  </div>
+      {% render "footer", metadata: site.metadata %}
+
+      {% render "modal", metadata: site.metadata %}
+    </div>
   </body>
 </html>
