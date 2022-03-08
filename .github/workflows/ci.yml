@@ -45,13 +45,14 @@ jobs:
       - name: "Build site"
         run: |
           export BRIDGETOWN_ENV=production
-          bundle exec bridgetown build
+          bundle exec bridgetown build --verbose
 
       - name: "Fix assets paths"
         run: |
-          mv output/_bridgetown/static ./output/assets
-          find output/ -name '*.html' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
-          find output/ -name '*.htmle' -exec rm {} \;
+          ls -la ./
+          mv ./output/_bridgetown/static ./output/assets
+          find ./output/ -name '*.html' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
+          find ./output/ -name '*.htmle' -exec rm {} \;
 
       - name: Deploy to GitHub Pages
         if: success()
