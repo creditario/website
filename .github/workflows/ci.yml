@@ -40,9 +40,7 @@ jobs:
 
       - name: "Yarn install"
         run: |
-          export BRIDGETOWN_ENV=production
           yarn install
-          yarn webpack --mode production
 
       - name: "Build site"
         run: |
