@@ -4,7 +4,7 @@ name: "Build pages"
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   RUBY_VERSION: 3.0.2
@@ -62,7 +62,7 @@ jobs:
           target_branch: gh-pages
           build_dir: output
           keep_history: true
-          fqdn: foto.mariochavez.io
+          fqdn: aoorora.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
