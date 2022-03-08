@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'ObjektivMk';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("./ObjektivMk3-Lt.woff2") format('woff2');
+  font-named-instance: 'Regular';
+}
+
+@font-face {
+  font-family: 'ObjektivMk';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./ObjektivMk2-Bd.woff2") format('woff2');
+  font-named-instance: 'Regular';
+}

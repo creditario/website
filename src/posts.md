@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Posts
-permalink: /posts/
+sitemap: false
 ---
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in collections.posts.resources %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
     </li>
   {% endfor %}
 </ul>
