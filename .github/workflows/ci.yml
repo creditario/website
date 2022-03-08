@@ -1,0 +1,73 @@
+
+name: "Build pages"
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  RUBY_VERSION: 3.0.2
+
+jobs:
+  pages:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Cache vendor
+        id: cache-vendor
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{env.RUBY_VERSION}}
+          bundler-cache: true
+          cache-version: 1
+
+      - name: "Bundle install"
+        run: |
+          bundle install --jobs 4 --retry 3
+
+      - name: "Yarn install"
+        run: |
+          export BRIDGETOWN_ENV=production
+          yarn install
+          yarn webpack --mode production
+
+      - name: "Build site"
+        run: |
+          export BRIDGETOWN_ENV=production
+          bundle exec bridgetown build
+
+      - name: "Fix assets paths"
+        run: |
+          mv output/_bridgetown/static ./output/assets
+          find output/ -name '*.html' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
+          find output/ -name '*.htmle' -exec rm {} \;
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: output
+          keep_history: true
+          fqdn: foto.mariochavez.io
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Archive site artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: output
