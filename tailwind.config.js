@@ -58,6 +58,14 @@ module.exports = {
         skin: {
           accented: withOpacityValue('--color-border-accented'),
         }
+      },
+      divideColor: {
+        skin: {
+          accented: withOpacityValue('--color-accented'),
+          alternate: withOpacityValue('--color-alternate'),
+          'alternate-1': withOpacityValue('--color-alternate-1'),
+          'alternate-2': withOpacityValue('--color-alternate-2')
+        }
       }
     },
   },

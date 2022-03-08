@@ -26,6 +26,13 @@ timezone: Guadalajara
 # pagination:
 #   enabled: true
 
+collections:
+  jobs:
+    output: true
+    permalink: pretty
+    sort_by: order
+    sort_direction: descending
+
 defaults:
   -
     values:
