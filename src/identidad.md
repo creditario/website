@@ -44,8 +44,8 @@ image: "/images/identidad-tags.jpg"
   </div>
 </div>
 
-<div class="py-12 bg-gray-50">
-  <div class="py-16 mx-auto max-w-7xl px-4 sm:py-24 sm:px-6 lg:py-32">
+<div class="relative py-16 bg-gray-50 sm:py-24 lg:py-32">
+  <div class="max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
     <div class="lg:text-center">
       <h3 class="text-base font-semibold tracking-wide uppercase text-skin-alternate">Verificaciones</h3>
       <h1 class="mt-3 text-skin-accented font-bold text-3xl tracking-tight leading-8 sm:text-4xl">Identifica clientes legítimos</h1>
