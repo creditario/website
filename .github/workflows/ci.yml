@@ -52,7 +52,11 @@ jobs:
           ls -la ./
           mv ./output/_bridgetown/static ./output/assets
           find ./output/ -name '*.html' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
+          find ./output/ -name '*.css' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
+          find ./output/ -name '*.js' -exec sed -ie 's/_bridgetown\/static\//assets\//' {} \;
           find ./output/ -name '*.htmle' -exec rm {} \;
+          find ./output/ -name '*.csse' -exec rm {} \;
+          find ./output/ -name '*.jse' -exec rm {} \;
 
       - name: Deploy to GitHub Pages
         if: success()
