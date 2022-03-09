@@ -15,7 +15,7 @@ layout: default
           </h1>
           <p class="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Manejo de créditos, crowdfunding y wallets electrónicos a través de una API que te ofrece la libertad de enfocarte en tu negocio sin preocuparte por la tecnología.</p>
           <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-            <a href="#" class="button button-alternate text-skin-accented font-bold text-lg px-12 py-3 pt-4 uppercase hover:text-skin-alternate-1">Quiero saber más</a>
+            <a href="#" class="button button-alternate text-skin-accented font-bold text-lg px-12 py-3 pt-4 uppercase hover:text-skin-alternate-1" data-action="modal#open">Quiero saber más</a>
           </div>
         </div>
         <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -99,7 +99,7 @@ layout: default
           <p class="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Personaliza tus flujos de solicitud, crea perfiles para tus clientes o estados de cuenta personalizados.</p>
           <p class="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Tus clientes merecen la experiencia de usuario que tu diseñaste para ellos. Nuestra API y Webhooks están para ayudarte sin importar las tecnologías que utilices.</p>
           <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-            <a href="#" class="button button-alternate text-skin-accented font-bold text-lg px-12 py-3 pt-4 uppercase hover:text-skin-alternate-1">Quiero saber más</a>
+            <a href="#" class="button button-alternate text-skin-accented font-bold text-lg px-12 py-3 pt-4 uppercase hover:text-skin-alternate-1" data-action="modal#open">Quiero saber más</a>
           </div>
         </div>
         <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
