@@ -74,7 +74,9 @@ export default class extends Controller {
     }
   }
 
-  open() {
+  open(event) {
+    event.preventDefault()
+
     this.configureAnimation(this.overlayTarget, true)
 
     this.element.classList.toggle("overflow-hidden")
@@ -85,7 +87,9 @@ export default class extends Controller {
     this.enter();
   }
 
-  close () {
+  close (event) {
+    event.preventDefault()
+
     this.configureAnimation(this.overlayTarget, false)
 
     this.leave();
@@ -103,8 +107,8 @@ export default class extends Controller {
   }
 
   animate(element, enter) {
-    const enterToClasses = element.dataset["transition-enter-to"]
-    const leaveToClasses = element.dataset["transition-leave-to"]
+    const enterToClasses = element.dataset["transitionEnterTo"]
+    const leaveToClasses = element.dataset["transitionLeaveTo"]
 
     if (enter) {
       element.classList.remove(leaveToClasses)
@@ -118,11 +122,11 @@ export default class extends Controller {
   }
 
   configureAnimation(element, enter) {
-    const enterClasses = element.dataset["transition-enter"].split(" ")
-    const enterActiveClasses = element.dataset["transition-enter-active"].split(" ")
+    const enterClasses = element.dataset["transitionEnter"].split(" ")
+    const enterActiveClasses = element.dataset["transitionEnterActive"].split(" ")
 
-    const leaveClasses = element.dataset["transition-leave"].split(" ")
-    const leaveActiveClasses = element.dataset["transition-leave-active"].split(" ")
+    const leaveClasses = element.dataset["transitionLeave"].split(" ")
+    const leaveActiveClasses = element.dataset["transitionLeaveActive"].split(" ")
 
     if (enter) {
       element.classList.remove(...leaveClasses)
