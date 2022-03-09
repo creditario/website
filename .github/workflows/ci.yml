@@ -45,11 +45,10 @@ jobs:
       - name: "Build site"
         run: |
           export BRIDGETOWN_ENV=production
-          bundle exec bridgetown deploy --verbose
+          bundle exec bridgetown deploy
 
       - name: "Fix assets paths"
         run: |
-          ls -la ./
           mv ./output/_bridgetown/static ./output/assets
           find ./output/ -name '*.html' -exec sed -e 's/_bridgetown\/static\//assets\//' {} \;
           find ./output/ -name '*.css' -exec sed -e 's/_bridgetown\/static\//assets\//' {} \;
