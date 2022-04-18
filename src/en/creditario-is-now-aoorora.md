@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Creditario is now aoroora"
 ---
 
 <main>
