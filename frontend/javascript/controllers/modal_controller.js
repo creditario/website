@@ -42,7 +42,7 @@ export default class extends Controller {
     this.submitTarget.setAttribute("disabled", true)
 
     fetch(
-      "https://contact-form.aoorora-com.workers.dev/",
+      "https://aoorora.com/contact",
       requestOptions
     )
     .then(response => {
