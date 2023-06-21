@@ -42,7 +42,7 @@ export default class extends Controller {
     this.submitTarget.setAttribute("disabled", true)
 
     fetch(
-      "https://7iplakas91.execute-api.us-east-2.amazonaws.com/production/",
+      "https://contact-form.aoorora-com.workers.dev/",
       requestOptions
     )
     .then(response => {
