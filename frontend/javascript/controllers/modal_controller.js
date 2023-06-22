@@ -46,7 +46,7 @@ export default class extends Controller {
       requestOptions
     )
     .then(response => {
-      if (response.status === 202) {
+      if (response.status === 200) {
         this.formTarget.reset()
         this.clearAlert()
 
