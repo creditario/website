@@ -111,8 +111,8 @@ layout: default
     <div class="text-skin-inverted bg-skin-inverted bg-[url('/images/background.png')] bg-no-repeat bg-cover">
         <div class="py-16 mx-auto max-w-7xl px-4 sm:py-24 sm:px-6 lg:py-32">
             <div class="text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-skin-inverted sm:text-5xl md:text-6xl shadow">
-                    <span class="block">Aoorora es la solución que estabas buscando</span>
+                <h1 class="text-4xl tracking-tight font-extrabold text-skin-inverted sm:text-5xl md:text-6xl">
+                    Aoorora es la solución que estabas buscando
                 </h1>
                 <p class="mt-3 max-w-md mx-auto text-base text-skin-inverted sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">La plataforma sobre la cuál construir la solución para tus clientes.</p>
                 <div class="mt-10 flex justify-center gap-x-6">
