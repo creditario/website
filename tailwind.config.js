@@ -52,6 +52,7 @@ module.exports = {
         skin: {
           base: withOpacityValue('--color-border-base'),
           accented: withOpacityValue('--color-border-accented'),
+          alternate: withOpacityValue('--color-alternate'),
         }
       },
       textDecorationColor: {
