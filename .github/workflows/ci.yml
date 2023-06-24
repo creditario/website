@@ -7,7 +7,7 @@ on:
       - master
 
 env:
-  RUBY_VERSION: 3.0.2
+  RUBY_VERSION: 3.2.2
 
 jobs:
   pages:

@@ -8,7 +8,7 @@ function withOpacityValue(variableName) {
 };
 
 module.exports = {
-  content: ["./src/**/*.{liquid,md,html,yml}", "./frontend/javascript/**/*.js"],
+  content: ["./src/**/*.{liquid,md,html,yml,erb}", "./frontend/javascript/**/*.js"],
   theme: {
     extend: {
       fontFamily: {

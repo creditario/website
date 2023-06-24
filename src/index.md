@@ -12,7 +12,7 @@ layout: default
         </div>
         <div class="mt-16 flow-root sm:mt-24">
             <div class="-m-2 rounded-xl bg-gray-900/5 p-2 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img src="/images/dashboard.png" alt="Aoorora dashboard" width="2560" height="1440" class="rounded-md shadow-2xl" />
+                <img src="/images/06/dashboard.png" alt="Aoorora dashboard" width="2560" height="1440" class="rounded-md shadow-2xl" />
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@ layout: default
 
             <div class="relative mt-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                    <img class="relative rounded-lg shadow-lg" src="/images/products.png" alt="Aoorora products" />
+                    <img class="relative rounded-lg shadow-lg" src="/images/06/products.png" alt="Aoorora products" />
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@ layout: default
 
             <div class="relative mt-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                    <img class="relative rounded-lg shadow-lg" src="/images/customers.png" alt="Aoorora customers" />
+                    <img class="relative rounded-lg shadow-lg" src="/images/06/customers.png" alt="Aoorora customers" />
                 </div>
             </div>
         </div>
@@ -102,13 +102,13 @@ layout: default
             </div>
             <div class="relative mt-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                    <img class="relative rounded-lg shadow-lg" src="/images/api.png" alt="Aoorora API" />
+                    <img class="relative rounded-lg shadow-lg" src="/images/06/api.png" alt="Aoorora API" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="text-skin-inverted bg-skin-inverted bg-[url('/images/background.png')] bg-no-repeat bg-cover">
+    <div class="text-skin-inverted bg-skin-inverted bg-[url('/images/06/background.png')] bg-no-repeat bg-cover">
         <div class="py-16 mx-auto max-w-7xl px-4 sm:py-24 sm:px-6 lg:py-32">
             <div class="text-center">
                 <h1 class="text-4xl tracking-tight font-extrabold text-skin-inverted sm:text-5xl md:text-6xl">

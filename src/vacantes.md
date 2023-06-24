@@ -18,37 +18,37 @@ title: Vacantes
   </div>
 
   <div class="divide-y divide-skin-alternate-2">
-    {% for job in collections.jobs.resources %}
-      {% if job.status == "Abierta" %}
+    <% collections.jobs.resources.each do |job| %>
+      <% if job.status == "Abierta" %>
         <section class="bg-white">
           <div class="max-w-2xl px-6 mx-auto lg:max-w-6xl">
             <sidebar class="py-12 grid lg:grid-cols-3 lg:gap-16">
-              {% render "job_sidebar", job: job %}
+              <%= render "job_sidebar", job: job %>
 
               <div class="col-span-2 space-y-12">
                 <div class="space-y-8">
                   <div class="space-y-2">
-                    <h1 class="text-3xl font-bold text-skin-accented leading-9 sm:text-4xl sm:leading-10">{{ job.title }}</h1>
-                    <p class="text-lg text-skin-muted leading-7">{{ job.description }}</p>
+                    <h1 class="text-3xl font-bold text-skin-accented leading-9 sm:text-4xl sm:leading-10"><%= job.title %></h1>
+                    <p class="text-lg text-skin-muted leading-7"><%= job.description %></p>
                   </div>
                 </div>
 
-                {% render "job_sidebar_mobile", job: job %}
+                <%= render "job_sidebar_mobile", job: job %>
 
                 <div class="prose">
-                  {{ job.content }}
+                  <%= job.content %>
 
-                  {% if job.status == "Abierta" %}
+                  <% if job.status == "Abierta" %>
                     <h2>¿Cómo aplicar?</h2>
-                    <p>Envía tu curriculum acompañado de una breve presentación a la dirección de correo electrónico <a class="font-semibold hover:underline" href="mailto:empleo@creditar.io?subject={{ job.title }}">empleo@aoorora.com</a></p>
-                  {% endif %}
+                    <p>Envía tu curriculum acompañado de una breve presentación a la dirección de correo electrónico <a class="font-semibold hover:underline" href="mailto:empleo@creditar.io?subject=<%= job.title %>">empleo@aoorora.com</a></p>
+                  <% end %>
                 </div>
               </div>
             </sidebar>
           </div>
         </section>
-      {% endif %}
-    {% endfor %}
+      <% end %>
+    <% end %>
   </div>
 
 </main>

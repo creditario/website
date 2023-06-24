@@ -1,6 +1,6 @@
-import "index.css"
+import "../styles/index.css"
 
 // Import all JavaScript & CSS files from src/_components
-import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
+// import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
 
-import "controllers"
+import "./controllers"
