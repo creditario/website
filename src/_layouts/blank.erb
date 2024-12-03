@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="<%= site.locale %>">
+  <head>
+    <%= render "head", metadata: site.metadata %>
+  </head>
+  <body class="font-sans text-skin-base <%= resource.data.layout %> <%= resource.data.page_class %>" data-controller="modal">
+    <div class="relative bg-white overflow-hidden">
+      <%= yield %>
+    </div>
+  </body>
+</html>

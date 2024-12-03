@@ -5,10 +5,10 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Aoorora
-tagline: La plataforma bancaria diseñada para integrar tu negocio financiero.
+tagline: Nos estamos reinventando
 email: hola@aoorora.com
 description: >-
-  Manejo de créditos, crowdfunding y wallets electrónicos a través de una API que te ofrece la libertad de enfocarte en tu negocio sin preocuparte por la tecnología.
+  Nos estamos reinventando
 
 twitter:
   username: aoorora
